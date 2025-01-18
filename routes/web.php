@@ -5,9 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
 
 // Route for the home page
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PostController::class, 'index'])->name('home');
 
 // Resource routes for posts
 Route::resource('posts', PostController::class);
