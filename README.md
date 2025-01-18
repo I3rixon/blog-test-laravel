@@ -21,7 +21,7 @@ This is a simple blog management system built with Laravel. It includes function
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/I3rixon/blog-test-laravel.git
    cd blog
    ```
 
