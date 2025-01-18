@@ -126,3 +126,11 @@ Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name(
 ## ✅ License
 This project is open-source and available under the MIT License.
 
+## Screenshots
+
+Here are some screenshots of the project:
+
+![Screenshot 1](Screenshot_1.png)
+![Screenshot 2](Screenshot_2.png)
+![Screenshot 3](Screenshot_3.png)
+![Screenshot 4](Screenshot_4.png)
