@@ -2,12 +2,6 @@
 
 This is a simple blog management system built with Laravel. It includes functionality for creating, editing, viewing, and deleting blog posts, as well as adding comments and searching for posts.
 
-## 📦 Requirements
-- PHP 7.4 - 8.0
-- Composer
-- Laravel 9+
-- MySQL / MariaDB
-
 ## 📚 Features
 - **CRUD for Blog Posts**: Create, update, delete, and view blog posts.
 - **Comments**: Add comments to posts.
@@ -149,3 +143,8 @@ Here are some screenshots of the project:
 
 ![Screenshot 5](Screenshot_5.png)
 ![Screenshot 6](Screenshot_6.png)
+
+**Searching**
+
+![Screenshot 7](Screenshot_7.png)
+![Screenshot 8](Screenshot_8.png)

@@ -12,9 +12,15 @@ class PostController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::paginate(5);
+        $query = Post::query();
+
+        if ($request->has('search')) {
+            $query->where('title', 'like', '%' . $request->search . '%');
+        }
+
+        $posts = $query->paginate(5);
         return view('posts.index', compact('posts'));
     }
     /**
