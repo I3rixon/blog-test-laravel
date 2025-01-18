@@ -119,7 +119,15 @@ Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name(
    - `GET /api/posts`
    - `GET /api/posts/{id}`
    - `POST /api/posts/{id}/comments`
+4. ** Seed the database with a user:
+    ```bash
+    php artisan db:seed --class=UserSeeder
+    ```
+    This seeder will create a user with the following credentials:
 
+    Name: root
+    Email: root@testblog.com
+    Password: password
 ---
 
 
