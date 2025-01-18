@@ -9,13 +9,20 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        $request->validate(['email' => 'required', 'password' => 'required']);
-        $user = User::where('email', $request->email)->first();
+        $credentials = $request->only('email', 'password');
 
-        if (!$user || !Hash::check($request->password, $user->password)) {
-            return response(['message' => 'Invalid credentials'], 401);
+        if (Auth::attempt($credentials)) {
+            $token = $request->user()->createToken('authToken')->plainTextToken;
+
+            return response()->json([
+                'status' => 'success',
+                'token' => $token,
+            ]);
         }
 
-        return $user->createToken('api-token')->plainTextToken;
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Invalid credentials',
+        ], 401);
     }
 }
