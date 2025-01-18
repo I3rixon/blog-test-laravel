@@ -128,7 +128,7 @@ Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name(
     Name: root
 
     Email: root@testblog.com
-    
+
     Password: password
 ---
 
@@ -144,3 +144,8 @@ Here are some screenshots of the project:
 ![Screenshot 2](Screenshot_2.png)
 ![Screenshot 3](Screenshot_3.png)
 ![Screenshot 4](Screenshot_4.png)
+
+**API request via Postman example**
+
+![Screenshot 5](Screenshot_5.png)
+![Screenshot 6](Screenshot_6.png)

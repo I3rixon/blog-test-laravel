@@ -17,6 +17,16 @@ class PostController extends Controller
         $posts = Post::paginate(5);
         return view('posts.index', compact('posts'));
     }
+    /**
+     * Display a listing of the posts for API.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function apiIndex()
+    {
+        $posts = Post::paginate(5);
+        return response()->json($posts);
+    }
 
     /**
      * Display the specified post.
