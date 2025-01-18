@@ -6,7 +6,7 @@
 
     <h3>Comments</h3>
     @foreach ($post->comments as $comment)
-        <p>{{ $comment->content }}</p>
+        <div class="comment">{{ $comment->content }}</div>
     @endforeach
 
     <form action="{{ route('comments.store', $post) }}" method="POST">

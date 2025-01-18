@@ -12,3 +12,4 @@ Route::resource('posts', PostController::class);
 
 // Route to store comments for a specific post
 Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
+
